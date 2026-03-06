@@ -17,7 +17,7 @@ export const Header = () => {
     <div className="px-18 py-4 max-w-7xl mx-auto flex justify-between items-center w-full">
       <div className="flex items-center gap-2">
         <Image src="/logo.png" alt="logo" width={40} height={40} />
-        <h1 className="font-game text-2xl">CodeBox</h1>
+        <h1 className="font-game mt-1 text-2xl">CodeBox</h1>
       </div>
       {/* navbar */}
       <NavigationMenu >
@@ -60,7 +60,7 @@ export const Header = () => {
       </NavigationMenu>
 
       {/* sign up button */}
-      <Button className="font-game text-xl" variant="pixel">
+      <Button className="font-game text-xl cursor-pointer" variant="pixel">
         Sign Up
       </Button>
     </div>

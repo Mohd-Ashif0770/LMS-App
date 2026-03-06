@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono, Inter, Pixelify_Sans, Jersey_10 } from "next/font/google";
 import "./globals.css";
 import ThemeProvider from "./theme-provider";
+import { ClerkProvider } from "@clerk/nextjs";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -40,6 +41,7 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable}
          ${GameFont.variable} ${inter.variable} antialiased`}
       >
+        <ClerkProvider>
         <ThemeProvider
         attribute="class"
         defaultTheme="dark"
@@ -48,6 +50,7 @@ export default function RootLayout({
         >
           {children}
         </ThemeProvider>
+        </ClerkProvider>
       </body>
     </html>
   );
